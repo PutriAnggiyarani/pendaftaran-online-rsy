@@ -93,7 +93,7 @@ class PendaftaranController extends Controller
         }
 
         $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('pendaftaran.pdf', compact('pendaftaran'));
-        return $pdf->download('Bukti_Registrasi_' . $pendaftaran->no_rm . '.pdf');
+        return $pdf->stream('Bukti_Registrasi_' . $pendaftaran->no_rm . '.pdf');
     }
 
     /**
