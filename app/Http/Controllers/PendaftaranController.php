@@ -16,6 +16,12 @@ class PendaftaranController extends Controller
         return view('dashboard', compact('pendaftarans'));
     }
 
+    public function home()
+    {
+        $pendaftarans = \App\Models\Pendaftaran::where('user_id', auth()->id())->latest()->get();
+        return view('home', compact('pendaftarans'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -78,6 +84,16 @@ class PendaftaranController extends Controller
             abort(403);
         }
         return view('pendaftaran.show', compact('pendaftaran'));
+    }
+
+    public function pdf(Pendaftaran $pendaftaran)
+    {
+        if ($pendaftaran->user_id !== auth()->id()) {
+            abort(403);
+        }
+
+        $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('pendaftaran.pdf', compact('pendaftaran'));
+        return $pdf->download('Bukti_Registrasi_' . $pendaftaran->no_rm . '.pdf');
     }
 
     /**

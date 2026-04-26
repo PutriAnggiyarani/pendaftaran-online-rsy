@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pendaftaran Berhasil - RS CINTA</title>
+    <title>Pendaftaran Berhasil - RS DR M YASIN BONE</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="font-sans antialiased bg-[#f4f8fa] pb-12">
@@ -19,7 +19,7 @@
             <img src="{{ asset('build/assets/image/logors.png') }}" alt="Logo RS Cinta" class="w-8 h-8 object-contain">
             <div>
                 <h1 class="text-sm font-bold text-[#1f2937] leading-tight">Status Pendaftaran</h1>
-                <p class="text-[10px] text-[#64748b]">RS CINTA</p>
+                <p class="text-[10px] text-[#64748b]">RS DR M YASIN BONE</p>
             </div>
         </div>
     </header>
@@ -118,12 +118,12 @@
 
             <!-- Buttons -->
             <div class="flex flex-col sm:flex-row gap-4">
-                <button onclick="window.print()" class="w-full sm:w-1/2 py-3.5 bg-[#fb9b5d] rounded-xl font-bold text-white shadow-sm hover:bg-[#e88a4e] focus:outline-none focus:ring-2 focus:ring-[#fb9b5d] transition-colors flex justify-center items-center gap-2 text-sm">
+                <a href="{{ route('pendaftaran.pdf', $pendaftaran->id) }}" class="w-full sm:w-1/2 py-3.5 bg-[#fb9b5d] rounded-xl font-bold text-white shadow-sm hover:bg-[#e88a4e] focus:outline-none focus:ring-2 focus:ring-[#fb9b5d] transition-colors flex justify-center items-center gap-2 text-sm">
                     <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                     </svg>
                     Download PDF
-                </button>
+                </a>
                 <a href="{{ route('dashboard') }}" class="w-full sm:w-1/2 py-3.5 bg-[#4ebde1] rounded-xl font-bold text-white shadow-sm hover:bg-[#3baacb] focus:outline-none focus:ring-2 focus:ring-[#4ebde1] transition-colors flex justify-center items-center gap-2 text-sm">
                     <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
