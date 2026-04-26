@@ -1,3 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@source "../../resources/views";
+@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views";
+@source "../../storage/framework/views";
+
+@plugin "@tailwindcss/forms";
+
+@theme {
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
