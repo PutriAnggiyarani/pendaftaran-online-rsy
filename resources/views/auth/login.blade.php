@@ -1,7 +1,7 @@
 <x-guest-layout>
     <!-- Logo & Header -->
     <div class="flex flex-col items-center justify-center mb-8">
-        <img src="{{ asset('build/assets/image/logors.png') }}" alt="Logo RS Cinta" class="w-16 h-16 object-contain mb-4">
+        <img src="{{ asset('build/assets/image/logors.png') }}" alt="Logo RS Cinta" class="w-20 h-20 object-contain mb-4">
         <h1 class="text-3xl font-extrabold text-[#1f2937] tracking-tight">RS CINTA</h1>
         <p class="text-[#64748b] text-sm mt-1">Selamat Datang di Sistem Registrasi Pasien</p>
     </div>

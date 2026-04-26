@@ -36,11 +36,18 @@ class PendaftaranController extends Controller
             'jenis_kelamin' => 'required|in:Laki-laki,Perempuan',
             'no_telepon' => 'required|string|max:20',
             'alamat' => 'required|string',
+            'jenis_pendaftaran' => 'required|in:Online,On Site',
             'poli_tujuan' => 'required|string|max:255',
+            'dokter' => 'required|string|max:255',
             'tanggal_berobat' => 'required|date|after_or_equal:today',
+            'jam_periksa' => 'required',
         ]);
 
-        \App\Models\Pendaftaran::create([
+        // Generate RM and Antrian
+        $noRm = 'RM-' . date('Y') . '-' . rand(100000, 999999);
+        $noAntrian = 'C-' . rand(100, 999);
+
+        $pendaftaran = \App\Models\Pendaftaran::create([
             'user_id' => auth()->id(),
             'nama_pasien' => $request->nama_pasien,
             'nik' => $request->nik,
@@ -48,12 +55,17 @@ class PendaftaranController extends Controller
             'jenis_kelamin' => $request->jenis_kelamin,
             'no_telepon' => $request->no_telepon,
             'alamat' => $request->alamat,
+            'jenis_pendaftaran' => $request->jenis_pendaftaran,
             'poli_tujuan' => $request->poli_tujuan,
+            'dokter' => $request->dokter,
             'tanggal_berobat' => $request->tanggal_berobat,
+            'jam_periksa' => $request->jam_periksa,
+            'no_rm' => $noRm,
+            'no_antrian' => $noAntrian,
             'status' => 'Menunggu',
         ]);
 
-        return redirect()->route('dashboard')->with('success', 'Pendaftaran berhasil dibuat.');
+        return redirect()->route('pendaftaran.show', $pendaftaran->id)->with('success', 'Pendaftaran berhasil!');
     }
 
     /**
@@ -61,7 +73,11 @@ class PendaftaranController extends Controller
      */
     public function show(Pendaftaran $pendaftaran)
     {
-        //
+        // Pastikan hanya user bersangkutan yang bisa melihat
+        if ($pendaftaran->user_id !== auth()->id()) {
+            abort(403);
+        }
+        return view('pendaftaran.show', compact('pendaftaran'));
     }
 
     /**

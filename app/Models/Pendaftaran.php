@@ -9,7 +9,8 @@ class Pendaftaran extends Model
     protected $fillable = [
         'user_id', 'nama_pasien', 'nik', 'tanggal_lahir', 
         'jenis_kelamin', 'no_telepon', 'alamat', 'poli_tujuan', 
-        'tanggal_berobat', 'status'
+        'tanggal_berobat', 'status', 'jenis_pendaftaran',
+        'dokter', 'jam_periksa', 'no_rm', 'no_antrian'
     ];
 
     public function user()

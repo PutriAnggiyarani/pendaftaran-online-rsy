@@ -11,6 +11,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [\App\Http\Controllers\PendaftaranController::class, 'index'])->name('dashboard');
     Route::get('/pendaftaran/create', [\App\Http\Controllers\PendaftaranController::class, 'create'])->name('pendaftaran.create');
     Route::post('/pendaftaran', [\App\Http\Controllers\PendaftaranController::class, 'store'])->name('pendaftaran.store');
+    Route::get('/pendaftaran/{pendaftaran}', [\App\Http\Controllers\PendaftaranController::class, 'show'])->name('pendaftaran.show');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
