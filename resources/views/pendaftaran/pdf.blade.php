@@ -67,9 +67,9 @@
 
     <div class="header">
         <h1>BUKTI REGISTRASI PASIEN</h1>
-        <h2>RS CINTA</h2>
-        <p>Alamat : Jl. Jendral Sudirman No. 123, JAKARTA - 12345</p>
-        <p>Phone. 021 123 456 - email: info@rscinta.com - Website: rscinta.com</p>
+        <h2>RS DR M YASIN BONE</h2>
+        <p>Alamat : Jl. Jendral Sudirman No.09, Masumpu,Kec.Tanete Riattang - Bone, Sulawesi Selatan</p>
+        <p>Phone. (0481) 21082 - email: rsdrmyasinbone30@gmail.com</p>
     </div>
 
     <div class="divider"></div>
@@ -120,7 +120,6 @@
 
     <div class="notes">
         <p>Keterangan:</p>
-        <p>Pastikan Nomor HP / Kontak anda aktif untuk sms</p>
         <p>Diharapkan datang 30 menit sebelum estimasi jam pendaftaran</p>
         <p>Silahkan bawa berkas pelengkap lainnya saat datang ke Rumah Sakit</p>
         <p class="bold">Bagi Pasien yang sudah mengambil Antrian namun tidak datang diloket sampai 10 Nomor antrian selanjutnya, maka pasien harus mengambil ulang antrian</p>

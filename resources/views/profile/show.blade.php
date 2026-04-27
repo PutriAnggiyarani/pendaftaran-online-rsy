@@ -22,11 +22,8 @@
             </a>
             
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-[#6bc693] to-[#4ebde1] flex items-center justify-center shadow-sm">
-                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                </div>
+                <!-- <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-[#6bc693] to-[#4ebde1] flex items-center justify-center shadow-sm"> -->
+                    <img src="{{ asset('build/assets/image/logors.png') }}" alt="Logo RS Cinta" class="w-15 h-15 object-contain">
                 <div>
                     <h1 class="text-lg font-bold text-[#1f2937] leading-none">Profil Saya</h1>
                     <p class="text-[11px] text-[#64748b] mt-1 font-medium tracking-wide">RS DR M YASIN BONE</p>
